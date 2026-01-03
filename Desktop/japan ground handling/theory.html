@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Theory | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html" class="active">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="codes.html">Codes</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="container" style="max-width: 1200px; padding: 0 15px;">
+        <h2 class="section-title">Full Theory Course (සමස්ත විෂය නිර්දේශය)</h2>
+
+        <!-- Folder/Tab Navigation (5 Main Topics) -->
+        <div class="folder-grid">
+            <div class="folder-card active" onclick="openSection('section-basic', this)">
+                <div class="folder-icon"><i class="fas fa-book-reader"></i></div>
+                <h3>01. Basic Knowledge</h3>
+                <p>මූලික දැනුම</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-ramp', this)">
+                <div class="folder-icon"><i class="fas fa-plane-arrival"></i></div>
+                <h3>02. Ramp Safety</h3>
+                <p>රැම්ප් ආරක්ෂාව</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-gse', this)">
+                <div class="folder-icon"><i class="fas fa-truck-moving"></i></div>
+                <h3>03. GSE Operations</h3>
+                <p>GSE මෙහෙයුම්</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-cargo', this)">
+                <div class="folder-icon"><i class="fas fa-boxes"></i></div>
+                <h3>04. Cargo & Baggage</h3>
+                <p>බඩු බාහිරාදිය</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-dg', this)">
+                <div class="folder-icon"><i class="fas fa-radiation"></i></div>
+                <h3>05. Dangerous Goods</h3>
+                <p>අන්තරායකර භාණ්ඩ</p>
+            </div>
+        </div>
+
+        <div class="content-area">
+
+            <!-- SECTION 01: BASIC KNOWLEDGE -->
+            <article class="theory-section active" id="section-basic">
+                <div class="section-header">
+                    <span>01. Basic Knowledge (මූලික දැනුම)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">基礎知識 (Kiso Chishiki)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Aircraft Types (ගුවන් යානා වර්ග)</h4>
+                        <div class="jp-block">航空機の種類 (Kōkūki no Shurui)</div>
+                        <p>
+                            ගුවන් යානා ප්‍රධාන වශයෙන් වර්ග දෙකකි:
+                        </p>
+                        <ul>
+                            <li><strong>Passenger Aircraft (<span class="japanese-term">旅客機 -
+                                        Ryokakuki</span>):</strong>
+                                මගීන් ප්‍රවාහනය කරයි. (උදා: Boeing 747, Airbus A380)</li>
+                            <li><strong>Cargo Aircraft (<span class="japanese-term">貨物機 - Kamotsuki</span>):</strong>
+                                භාණ්ඩ ප්‍රවාහනය කරයි. (උදා: Boeing 747F, Airbus A300-600ST Beluga)</li>
+                        </ul>
+                        <p class="learning-point">
+                            සමහර ගුවන් යානා මගීන් සහ භාණ්ඩ යන දෙකම ප්‍රවාහනය කරයි (Combi Aircraft).
+                        </p>
+
+                        <!-- OFFICIAL NOTE START -->
+                        <div class="official-note">
+                            <h5><i class="fas fa-scroll"></i> Official Curriculum Note</h5>
+
+                            <div class="note-block">
+                                <div class="jp">航空会社は、旅客や貨物を無事に目的地に到着させなければならない。</div>
+                                <div class="si">ගුවන් සමාගම් මගීන් හා භාණ්ඩ ආරක්ෂිතව ගමනාන්තය වෙත සේන්දු කළ යුතුය.</div>
+                            </div>
+
+                            <div class="note-block">
+                                <div class="jp">この無事に到着させる、すなわち航空機事故を起こさないことが、航空会社の安全であり、最も重要なところである。</div>
+                                <div class="si">ගුවන් යානය ආරක්ෂිතව පැමිණෙන බව සහ අනතුරකින් තොර බව සහතික කිරීම ගුවන්
+                                    සමාගමක යුතුකම වන අතර එය වඩාත්ම වැදගත් කරුණයි.</div>
+                            </div>
+
+                            <div class="note-block">
+                                <div class="jp">航空に関係する仕事をするすべての人は、この「安全」「乗客の命」を常に考えて、あらゆる業務を行う事が大切である。</div>
+                                <div class="si">ගුවන් සේවයට සම්බන්ධ රැකියා කරන සියලුම දෙනා නිතරම මෙම "ආරක්ෂාව" සහ
+                                    "මගීන්ගේ ජීවිත" ගැන සිතා වැඩ කිරීම වැදගත් වේ.</div>
+                            </div>
+                        </div>
+                        <!-- OFFICIAL NOTE END -->
+
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_aircraft_types_1767461767524.png" alt="Aircraft Types" class="small-illu"
+                            onerror="this.src='https://placehold.co/400x300?text=Aircraft+Types'">
+                        <div class="caption">Passenger vs. Cargo Aircraft (AI Illustration)</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. Safe Operations (ආරක්ෂිත මෙහෙයුම්)</h4>
+
+                        <!-- OFFICIAL NOTE START -->
+                        <div class="official-note">
+                            <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Purpose of Safe Operations</h5>
+                            <div class="note-block">
+                                <div class="jp">もしも、航空機事故が発生した場合、次のような問題が生じる。</div>
+                                <div class="si">ගුවන් යානා අනතුරක් සිදු වූ විට, පහත සඳහන් ගැටළු මතු වේ;</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">① 何ものにも代えられない命を奪う。</div>
+                                <div class="si">කිසිම දෙයකින් ආදේශ කළ නොහැකි ජීවිත අහිමි වීම.</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">② 航空機事故は、ほとんどが大きな事故となるため、社会的に大きな不安感を与える。</div>
+                                <div class="si">බොහෝ ගුවන් යානා අනතුරු බරපතල අනතුරු වන බැවින් ඒවා සමාජය තුළ මහත්
+                                    ආන්‍දෝලනයක් ඇති කරයි.</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">③ 航空機事故を処理するために、たくさんの費用がかかる。</div>
+                                <div class="si">ගුවන් අනතුරකින් පසු දේවල් සමථයකට පත් කිරීමට විශාල මුදලක් වැය වේ.</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">④ 航空機の損失は、会社の経営に大きく影響する。</div>
+                                <div class="si">ගුවන් යානයක අහිමි වීම ගුවන් සමාගමේ ක්‍රියාකාරිත්වයට විශාල බලපෑමක් ඇති
+                                    කරයි.</div>
+                            </div>
+                        </div>
+                        <!-- OFFICIAL NOTE END -->
+
+                        <h4>C. Aircraft Parts (ගුවන් යානා කොටස්)</h4>
+                        <div class="jp-block">航空機の部位 (Kōkūki no Bui)</div>
+                        <p>
+                            ගුවන් යානයක ප්‍රධාන කොටස්:
+                        </p>
+                        <ul>
+                            <li><strong>Fuselage (<span class="japanese-term">胴体 - Dōtai</span>):</strong> යානයේ ප්‍රධාන
+                                ශරීරය.</li>
+                            <li><strong>Wings (<span class="japanese-term">翼 - Tsubasa</span>):</strong> පියාපත්.</li>
+                            <li><strong>Engines (<span class="japanese-term">エンジン - Enjin</span>):</strong> එන්ජින්.
+                            </li>
+                            <li><strong>Tail (<span class="japanese-term">尾翼 - Biyoku</span>):</strong> වලිගය.</li>
+                            <li><strong>Landing Gear (<span class="japanese-term">着陸装置 - Chakuriku
+                                        Sōchi</span>):</strong>
+                                ගොඩබෑමේ ආම්පන්න.</li>
+                        </ul>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_aircraft_parts_1767461787188.png" alt="Aircraft Parts" class="small-illu"
+                            onerror="this.src='https://placehold.co/400x300?text=Aircraft+Parts'">
+                        <div class="caption">Main Parts of an Aircraft (AI Illustration)</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>C. Airport Layout (ගුවන් තොටුපල සැකැස්ම)</h4>
+                        <div class="jp-block">空港の配置 (Kūkō no Haichi)</div>
+                        <p>
+                            ගුවන් තොටුපලක ප්‍රධාන අංග:
+                        </p>
+                        <ul>
+                            <li><strong>Runway (<span class="japanese-term">滑走路 - Kassōro</span>):</strong> ගුවන් යානා
+                                ගොඩබසින සහ ගුවන් ගත වන මාර්ගය.</li>
+                            <li><strong>Taxiway (<span class="japanese-term">誘導路 - Yūdōro</span>):</strong> ගුවන් යානා
+                                ධාවන පථය සහ ගේට්ටුව අතර ගමන් කරන මාර්ගය.</li>
+                            <li><strong>Apron/Ramp (<span class="japanese-term">エプロン/駐機場 -
+                                        Epuron/Chūkijō</span>):</strong>
+                                ගුවන් යානා නවත්වන, භාණ්ඩ පටවන/බාන, මගීන් නංවන/බස්සන ප්‍රදේශය.</li>
+                            <li><strong>Terminal (<span class="japanese-term">ターミナル - Tāminaru</span>):</strong> මගීන්
+                                පිටත්වීම්/පැමිණීම් සිදු කරන ගොඩනැගිල්ල.</li>
+                        </ul>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_airport_layout_1767461804875.png" alt="Airport Layout" class="small-illu"
+                            onerror="this.src='https://placehold.co/400x300?text=Airport+Layout'">
+                        <div class="caption">Key Areas of an Airport (AI Illustration)</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 02: RAMP SAFETY -->
+            <article class="theory-section" id="section-ramp">
+                <div class="section-header">
+                    <span>02. Ramp Safety (රැම්ප් ආරක්ෂාව)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">ランプの安全 (Ranpu no Anzen)</span>
+                </div>
+
+                <!-- OFFICIAL NOTE START -->
+                <div class="official-note" style="margin-bottom: 30px;">
+                    <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Aircraft Priority</h5>
+                    <div class="note-block">
+                        <div class="jp">制限区域内においては、常に航空機の運航が最優先であり、いかなる車両なども航空機の運航を妨げる行為を行ってはならない。</div>
+                        <div class="si">සීමා කරන ලද ප්‍රදේශය තුළ, ගුවන් යානා මෙහෙයුම් සෑම විටම ඉහළම ප්‍රමුඛතාවයක් ලබා
+                            ගන්නා අතර ගුවන් යානයේ ක්‍රියාකාරිත්වයට බාධා වන කිසිදු ක්‍රියාවක නිරත නොවිය යුතුය.</div>
+                    </div>
+                </div>
+                <!-- OFFICIAL NOTE END -->
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Danger Zones (අනතුරුදායක කලාප)</h4>
+                        <div class="jp-block">危険区域 (Kiken Kuiki)</div>
+                        <p>
+                            ගුවන් යානයක් වටා ඇති අනතුරුදායක කලාප:
+                        </p>
+                        <ul>
+                            <li><strong>Blast (<span class="japanese-term">ブラスト</span>):</strong> එන්ජිම පිටුපසින්
+                                නික්මෙන අධික වායු ධාරාව. සුළඟ. වේගය 25m/s (Typhoon level). අධික තාපය.</li>
+                            <li><strong>Intake (<span class="japanese-term">インテーク</span>):</strong> එන්ජිම ඉදිරිපස ඇති
+                                චූෂණ
+                                බලය. (Suction). මිනිසුන්ව ඇද ගත හැක.</li>
+                        </ul>
+                        <p class="learning-point">අවවාදයයි: කවදාවත් එන්ජිම ඉදිරිපසට යන්න එපා.</p>
+                    </div>
+                    <div class="full-width-section">
+                        <img src="danger_zone_diagram_new.png" alt="Danger Zone Diagram New"
+                            onerror="this.src='https://placehold.co/800x300?text=Danger+Zone+Diagram'">
+                        <div class="caption">Figure 4: Intake & Exhaust Hazard Areas (Critical Safety)</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_danger_zones_1767461825376.png" alt="Engine Danger Zones"
+                            class="small-illu" onerror="this.src='https://placehold.co/300x200?text=Danger+Zone+Image'">
+                        <div class="caption">Blast & Intake Danger Areas (Simplified AI)</div>
+                    </div>
+                </div>
+
+                <!-- OFFICIAL NOTE START -->
+                <div class="official-note" style="margin-bottom: 30px;">
+                    <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Visibility from Aircraft</h5>
+
+                    <div class="note-block">
+                        <div class="jp">コクピットからの視界には死角が多くあり、機体の直近の視界は非常に悪く、安全確認が重要である。</div>
+                        <div class="si">නියමු කුටිසේ සිට දර්ශනයේ බොහෝ නොපෙනෙන ස්ථාන තිබේ. විශේෂයෙන් නියමු කුටිසේ සිට
+                            ගුවන් යානය අවට දර්ශනය ඉතා නරකයි (හොඳින් නොපෙනේ).</div>
+                    </div>
+
+                    <div class="note-block">
+                        <div class="jp">① 操縦姿勢では、右翼端、左翼端は確認できない。</div>
+                        <div class="si">දකුණු පියාපත් තුඩ හා වම් තටු තුඩ නියමු ස්ථානයේ සිට නොපෙනේ.</div>
+                    </div>
+
+                    <div class="note-block">
+                        <div class="jp">② 操縦席からは、前方 約15m 以上離れなければ、地上の障害物は確認できない。</div>
+                        <div class="si">නියමු අසුනේ සිට මීටර 15කට වඩා දුරින් මිස ගුවන් යානය ඉදිරිපස බිමෙහි ඇති බාධක
+                            නොපෙනේ.</div>
+                    </div>
+
+                    <div class="note-block">
+                        <div class="jp">③ 機⾧席から右側は、前方 10m 以上離れなければ、地上の障害物は確認できない。</div>
+                        <div class="si">කපිතාන් ආසනයේ සිට මීටර 10කට වඩා දුරින් මිස දකුණු පස ඇති බාධක නොපෙනේ.</div>
+                    </div>
+
+                    <div class="note-block">
+                        <div class="jp">④ 実験によると、操縦席から見て翼端とその付近にある障害物の間隔（クリアランス）を目測した場合、3m
+                            前後の誤差が認められたという。すなわち、狭い場所では、航空機が安全に通過できるかどうか、乗員のみでは判定できない。</div>
+                        <div class="si">අත්හදා බැලීම් වලට අනුව, පියාපත් කෙළවර අතර දුර නියමු කුටියේ සිට බලන විට මීටර් 3ක
+                            පමණ දෝෂයක් ඇති විය හැක. එබැවින් පටු ඉඩකඩකදී කාර්ය මණ්ඩලයට පමණක් ආරක්ෂිතව යා හැකිදැයි තීරණය
+                            කළ නොහැක.</div>
+                    </div>
+
+                    <div class="note-block">
+                        <div class="jp">⑤ 地上走行中の航空機の前方 40m 以内には、マーシャラによる誘導がない場合、車両、障害物などがあってはならない。</div>
+                        <div class="si">මාෂල්වරයෙකුගේ (සංඥාකරුගේ) මගපෙන්වීම නොමැති විට, බිම චලනය වන ගුවන් යානයක්
+                            ඉදිරිපිට මීටර් 40 ක් ඇතුළත වාහන හෝ බාධක නොතිබිය යුතුය.</div>
+                    </div>
+                </div>
+                <!-- OFFICIAL NOTE END -->
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. Marshalling Signals (හස්ත සංඥා)</h4>
+                        <div class="jp-block">マーシャリング (Marshalling)</div>
+
+                        <div class="jp-paragraph">
+                            ウォッチマンと他の担当者が合図を通じて、航空機を安全に目標場所へ移動できるよう監視し、導く作業である。
+                        </div>
+
+                        <p>
+                            ගුවන් යානය හසුරවන්නේ "මාෂල්" වරයා විසිනි. ඔහුගේ සංඥා වලට පමනක් නියමුවා අවනත වේ.
+                            <br>
+                            "All Clear", "Stop", "Turn Left" ආදී සංඥා හඳුනාගන්න.
+                        </p>
+                    </div>
+                    <div class="full-width-section">
+                        <img src="marshalling_whistle_signals.png" alt="Marshalling Signals with Whistle Commands"
+                            style="border: 2px solid #e67e22;"
+                            onerror="this.src='https://placehold.co/800x300?text=Marshalling+Signals'">
+                        <div class="caption">Figure 5: Master Signal Chart (Hand & Whistle Commands)</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_marshalling_1767461842023.png" alt="Marshalling Signals New"
+                            class="small-illu" onerror="this.src='https://placehold.co/400x300?text=Signal+Guide'">
+                        <div class="caption">Essential Signals (AI Illustration)</div>
+                    </div>
+                </div>
+
+                <!-- OFFICIAL NOTE START -->
+                <div class="official-note">
+                    <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Proper Signals</h5>
+                    <div class="note-block">
+                        <div class="jp">
+                            ウォッチ作業は、ウォッチマンと他の担当者（乗員・整備士・マーシャラ・航空機牽引車・ドライバ等）が合図を通じて、航空機を安全に目標場所へ移動できるよう監視し、導く作業である。</div>
+                        <div class="si">සංඥා වැඩ යනු ගුවන් යානයේ සංඥා හරහා ගුවන් යානය අධීක්ෂණය කිරීම හා මඟ පෙන්වීමයි.
+                            සංඥාකරු සහ අනෙකුත් පිරිස් (කාර්මිකයන්, මාෂල්, රියදුරන්) ගුවන් යානය ආරක්ෂිතව ඉලක්කගත ස්ථානයට
+                            ගෙන යා හැකි බව තහවුරු කරයි.</div>
+                    </div>
+                    <div class="note-block">
+                        <div class="jp">各空港で実施されるウォッチマンの動作は、基準に基づいた統一されたものでなければならない。</div>
+                        <div class="si">සෑම ගුවන් තොටුපලකම සංඥාකරු ක්‍රියා ප්‍රමිතිගත කර (එකම ආකාරයකට) තිබිය යුතුය.
+                        </div>
+                    </div>
+                </div>
+                <!-- OFFICIAL NOTE END -->
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>C. PPE & Checks (ආරක්ෂක ඇඳුම්)</h4>
+
+                        <div class="jp-paragraph">
+                            航空機地上作業において、その作業内容により、人身事故を未然に防止するため、さまざまな防具（手袋・安全ベルト・ヘルメット・帽子・耳栓 等）が使用されている。
+                            作業員は、着用している作業服のボタン、ファスナおよび靴の紐などを正しく締めなければならない。
+                        </div>
+
+                        <p>
+                            අනිවාර්ය ආරක්ෂක උපකරණ (<span class="japanese-term">保護具 - Hogogu</span>):
+                        </p>
+                        <ul>
+                            <li>Helmet (හෙල්මට්)</li>
+                            <li>Safety Shoes (ආරක්ෂක සපත්තු)</li>
+                            <li>Ear Plugs (ශබ්ද ආවරණ)</li>
+                            <li>Safety Vest (පරාවර්තක කබාය)</li>
+                        </ul>
+                        <p>වැඩ අවසන් වූ පසු නැවත පරීක්ෂා කරන්න (Final Check).</p>
+                    </div>
+                    <div class="media-content">
+                        <div class="sm-grid">
+                            <img src="./images/ai_ppe_gear_1767461876080.png" alt="PPE Items" class="small-illu"
+                                onerror="this.src='https://placehold.co/100x100?text=PPE'">
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>D. Accident Prevention (අනතුරු වැළැක්වීම)</h4>
+                        <div class="jp-block">予防 (Yobō)</div>
+                        <p>
+                            අනතුරු වළක්වා ගැනීමට භාවිතා කරන ප්‍රධාන ක්‍රම දෙකකි.
+                        </p>
+                        <ul>
+                            <li><strong>Hiyari Hatto (Near Miss Report):</strong> අනතුරක් වීමට ගිය අවස්ථා වාර්තා කිරීම.
+                            </li>
+                            <li><strong>Pointing and Calling (Yubisashi Kosho):</strong> ඇඟිල්ල දිගු කර හඬ නගා පරීක්ෂා
+                                කිරීම.</li>
+                        </ul>
+
+                        <div class="media-content">
+                            <img src="./images/ai_prevention_pointing_calling_1767463394305.png"
+                                alt="Pointing and Calling Gesture" class="small-illu"
+                                onerror="this.src='https://placehold.co/400x300?text=Yobisashi'">
+                            <div class="caption">Yubisashi Kosho (Pointing & Calling)</div>
+                        </div>
+
+                        <!-- OFFICIAL NOTE START -->
+                        <div class="official-note">
+                            <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Prevention</h5>
+                            <div class="note-block">
+                                <span class="badge-blue">Near Miss Reporting</span>
+                                <div class="jp">
+                                    事故やインシデントが発生する前に、それらにつながるエラーの情報があれば、事故の未然防止に役にたつ。このため「ヒヤリ・ハット・レポート」が重要になる。</div>
+                                <div class="si">අනතුරු සිදුවීමට පෙර, ඊට තුඩු දෙන වැරදි පිළිබඳ තොරතුරු තිබේ නම්, එය
+                                    අනතුරු වළක්වා ගැනීමට උපකාරී වේ. මේ නිසා "අතපසුවීම් පිළිබඳ වාර්තා" (Hiyari Hatto
+                                    Report) වැදගත් වේ.</div>
+                            </div>
+                            <div class="note-block">
+                                <span class="badge-blue">Pointing and Calling</span>
+                                <div class="jp">指を差しているのではなく、同時に声を出すことで意識を集中し、目で見ながら不安全状態はないか、安全は保たれているかを確認する。</div>
+                                <div class="si">ඇඟිල්ල දිගු කිරීම පමණක් නොව, එකවර හඬ නගා කීමෙන් ("Yoshi!"), අවධානය යොමු
+                                    කර ඇස් දෙකෙන් බලා ආරක්ෂිත බව තහවුරු කර ගනී.</div>
+                            </div>
+                        </div>
+                        <!-- OFFICIAL NOTE END -->
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 03: GSE OPERATIONS -->
+            <article class="theory-section" id="section-gse">
+                <div class="section-header">
+                    <span>03. GSE Operations (GSE මෙහෙයුම්)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">GSEの操作 (GSE no Sosa)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Vehicle Safety (වාහන ආරක්ෂාව)</h4>
+                        <div class="jp-paragraph">
+                            車両を運転する際は、制限速度を遵守し、航空機優先の原則を守らなければならない。
+                        </div>
+                        <p>ගුවන් තොටුපලේ වාහන ධාවනය:</p>
+                        <div class="highlight-box">
+                            <ul>
+                                <li><strong>Priority:</strong> ගුවන් යානයට සැමවිටම ඉඩ දෙන්න.</li>
+                                <li><strong>Speed Limit:</strong> සාමාන්‍ය පාරේ 30km/h, යානය අසල 15km/h (හෝ ඊට අඩුවෙන්).
+                                </li>
+                                <li><strong>Stop Check:</strong> යානයට ලං වීමට පෙර අනිවාර්යයෙන්ම නැවතී පරීක්ෂා කරන්න.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_gse_vehicle_1767461894822.png" alt="GSE Vehicle" class="small-illu"
+                            onerror="this.src='https://placehold.co/400x300?text=GSE'">
+                        <div class="caption">Ground Service Equipment (AI Illustration)</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. Departure Checks (පිටත්වීමේ පරීක්‍ෂා)</h4>
+                        <div class="jp-block">出発前の確認 (Shuppatsu Mae no Kakunin)</div>
+
+                        <!-- OFFICIAL NOTE START -->
+                        <div class="official-note">
+                            <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Departure Observation Points
+                            </h5>
+                            <div class="note-block">
+                                <div class="jp">① 航空機の衝突防止灯（アンチコリジョン・ライト）が点灯しているか。</div>
+                                <div class="si">ගුවන් යානා ගැටුම් නාශක විදුලි ප පහන් දැල්වී තිබේද?</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">② 航空機のエンジンが始動しているか。</div>
+                                <div class="si">ගුවන් යානා එන්ජින් ක්‍රියාත්මක වේද?</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">③ PBB（パッセンジャ・ボーディング・ブリッジ）が航空機より離されているか。</div>
+                                <div class="si">PBB (මගී බෝඩිං පාලම) ගුවන් යානයෙන් වෙන් කර තිබේද?</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">④ 車両（パッセンジャ・ステップ車、グラウンドパワー車、エア・スタータ車）の有無。</div>
+                                <div class="si">වාහන (පඩිපෙළ, GPU, ASU) ඉවත් කර තිබේද?</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">⑤ 航空機牽引車の黄色回転灯が点灯しているか。</div>
+                                <div class="si">ගුවන් යානා ටෝවිං වාහනයේ (Towing Car) කහ කැරකෙන ආලෝකය දල්වා තිබේද?</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">⑥ 車輪止め（チョック）が外されているか。</div>
+                                <div class="si">රෝද කුට්ටි (Chocks) ඉවත් කර තිබේද?</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp">⑦ ウォッチマンがオールクリア の合図をしているか。</div>
+                                <div class="si">සංඥාකරුගේ "All Clear" සංඥාව ලැබුණේද?</div>
+                            </div>
+                        </div>
+                        <!-- OFFICIAL NOTE END -->
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content full-width">
+                        <h4>C. Road Markings & Apron Definitions (මාර්ග සංඥා සහ ප්‍රදේශ)</h4>
+                        <div class="jp-block">車両通路の指示標示等 (Sharyō Tsūro no Shiji Hyōji)</div>
+
+                        <p>ගුවන් තොටුපලේ වාහන ධාවනය සඳහා විශේෂ සලකුණු සහ ප්‍රදේශ වෙන් කර ඇත.</p>
+
+                        <div class="media-content" style="margin-bottom: 20px;">
+                            <img src="./images/ai_road_markings_1767463410800.png" alt="Road Markings Diagram"
+                                style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;"
+                                onerror="this.src='https://placehold.co/600x300?text=Road+Markings'">
+                            <div class="caption">Vehicle Passage Indicators</div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="ios-table">
+                                <thead>
+                                    <tr>
+                                        <th>Marking (සලකුණ)</th>
+                                        <th>Meaning (තේරුම)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Stop Line</strong> <br> (停止線標示)</td>
+                                        <td>වාහන නැවැත්විය යුතු ස්ථානය පෙන්වයි.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Direction Line</strong> <br> (進行方向標示)</td>
+                                        <td>වාහන ගමන් කළ යුතු දිශාව පෙන්වයි.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Crosswalk</strong> <br> (横断歩道標示)</td>
+                                        <td>ඉදිරියෙන් මගී මාරුවක් ඇති බව පෙන්වයි.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Priority Mark</strong> <br> (前方優先標示)</td>
+                                        <td>ඉදිරියෙන් ගුවන් යානා එන බැවින් වාහන නවත්වා ඉඩ දිය යුතුය.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Wait Area</strong> <br> (待機区域標示)</td>
+                                        <td>Taxiway හරහා යාමට පෙර නැවතී සිටිය යුතු ස්ථානය.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="media-content" style="margin-top: 20px; margin-bottom: 20px;">
+                            <img src="./images/ai_apron_areas_1767463429227.png" alt="Apron Areas Diagram"
+                                style="max-width: 100%; border-radius: 8px; border: 1px solid #ddd;"
+                                onerror="this.src='https://placehold.co/600x400?text=Apron+Areas'">
+                            <div class="caption">Apron Areas (ERA vs ESA)</div>
+                        </div>
+
+                        <!-- OFFICIAL NOTE START -->
+                        <div class="official-note">
+                            <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Apron Areas</h5>
+                            <div class="note-block">
+                                <div class="jp"><strong>ERA (Equipment Restraint Area):</strong>
+                                    スポットに航空機が出入りする際には、いかなる車両や機材の進入も禁止する区域。</div>
+                                <div class="si"><strong>ERA:</strong> ගුවන් යානයක් පැමිණෙන විට හෝ පිටත්වන විට කිසිදු
+                                    වාහනයක්
+                                    හෝ උපකරණයක් ඇතුළු නොවිය යුතු තහනම් ප්‍රදේශයකි.</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp"><strong>ESA (Equipment Staging Area):</strong> 車両や機材の待機場所として使用する区域。
+                                </div>
+                                <div class="si"><strong>ESA:</strong> වාහන සහ උපකරණ රඳවා තැබීමට (Parking) භාවිතා කරන
+                                    ප්‍රදේශයයි.</div>
+                            </div>
+                            <div class="note-block">
+                                <div class="jp"><strong>PBB Area:</strong> 車両や機材の駐車を全面的に禁止する区域。</div>
+                                <div class="si"><strong>PBB Area:</strong> PBB (පාලම) ක්‍රියාත්මක වන ප්‍රදේශය වන අතර
+                                    මෙහි
+                                    වාහන නැවැත්වීම සම්පූර්ණයෙන්ම තහනම්ය.</div>
+                            </div>
+                        </div>
+                        <!-- OFFICIAL NOTE END -->
+
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 04: CARGO & BAGGAGE -->
+            <article class="theory-section" id="section-cargo">
+                <div class="section-header">
+                    <span>04. Cargo & Baggage (බඩු හා භාණ්ඩ)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">貨物・手荷物 (Kamotsu/Tenimotsu)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Baggage Handling (මගී බඩු පරිහරණය)</h4>
+                        <div class="jp-paragraph">
+                            手荷物は、お客様の大切な財産であり、慎重に取り扱わなければならない。
+                        </div>
+                        <p>මගීන්ගේ බෑග් (Baggage) පරිහරණය:</p>
+                        <ul>
+                            <li>විසි කරන්න එපා (Do not throw).</li>
+                            <li>ඇදගෙන යන්න එපා (Do not drag).</li>
+                            <li>තෙමෙන්න දෙන්න එපා (Keep dry).</li>
+                            <li>Heavy ටැග් ගැසූ බෑග් පරිස්සමින් උස්සන්න.</li>
+                        </ul>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_baggage_handling_1767461911057.png" alt="Handling with Care"
+                            class="small-illu" onerror="this.src='https://placehold.co/400x300?text=Baggage'">
+                        <div class="caption">Handle with Care (AI Illustration)</div>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. ULD (Unit Load Device)</h4>
+                        <p>ගුවන් යානයට බඩු පටවන්නේ <strong>ULD</strong> (Container / Pallet) වල දමාය.</p>
+                        <p>මේවා යානය ඇතුලේ අගුලු දමනු ලැබේ (Locks). ULD එකක් හානි වී ඇත්නම් (Damaged) පාවිච්චි නොකරන්න.
+                        </p>
+                    </div>
+                    <div class="media-content">
+                        <img src="./images/ai_uld_container_1767461928072.png" alt="ULD Container" class="small-illu"
+                            onerror="this.src='https://placehold.co/400x300?text=ULD+Image'">
+                        <div class="caption">ULD Container (AI Illustration)</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 05: DANGEROUS GOODS -->
+            <article class="theory-section" id="section-dg">
+                <div class="section-header">
+                    <span>05. Dangerous Goods (අන්තරායකර භාණ්ඩ)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">危険物 (Kikenbutsu)</span>
+                </div>
+
+                <div class="jp-paragraph">
+                    航空機に爆破物、発火・引火しやすいもの、銃砲刀剣類などの危険物を搭載することは禁止されている。
+                </div>
+
+                <p style="margin-bottom: 20px;">
+                    ගුවන් යානයට හානි කළ හැකි හෝ මිනිසුන්ට අනතුරුදායක ද්‍රව්‍ය "Dangerous Goods" ලෙස හැඳින්වේ.
+                </p>
+
+                <div class="table-container">
+                    <!-- 1. Hazard Class Labels -->
+                    <h4 style="border-left: 5px solid #d35400; padding-left: 10px; margin: 20px 0;">① Hazard Class
+                        Labels (අන්තරායකර පන්ති ලේබල්)</h4>
+                    <p style="margin-bottom:15px; font-size:0.95em;">
+                        අන්තරායකර භාණ්ඩ පන්ති 9 කට බෙදා ඇත.
+                        <br><span class="japanese-term">危険性を示すラベル</span> (Kikensei o shimesu raberu)
+                    </p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px; text-align: center;">
+                        <!-- Row 1 -->
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">1.
+                                火薬類<br>Explosives</div>
+                            <img src="images/dg_class_1_explosives_1767450976858.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 1 Explosives">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">වෙඩි බෙහෙත්</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">2.
+                                高圧ガス<br>Gases</div>
+                            <img src="images/dg_class_2_gases_1767450996266.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 2 Gases">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">අධි පීඩන වායු</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">3.
+                                引火性液体<br>Flammable Liquid</div>
+                            <img src="images/dg_class_3_flammable_liquid_1767451016014.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 3 Flammable Liquid">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">දැවෙනසුළු දියර</div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">4.
+                                可燃性物質<br>Flammable Solid</div>
+                            <img src="images/dg_class_4_flammable_solid_1767451102763.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 4 Flammable Solid">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">ගිනිගන්නා ඝන ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#f0ad4e;">5.
+                                酸化性物質<br>Oxidizer</div>
+                            <img src="images/dg_class_5_oxidizer_1767451141638.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 5 Oxidizer">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">ඔක්සිකාරක ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">6.
+                                毒物類<br>Toxic</div>
+                            <img src="images/dg_class_6_toxic_1767451159767.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 6 Toxic">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">විෂ සහිත ද්‍රව්‍ය</div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">7.
+                                放射性物質<br>Radioactive</div>
+                            <img src="images/dg_class_7_radioactive_1767451258480.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 7 Radioactive">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">විකිරණශීලී ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">8.
+                                腐食性物質<br>Corrosive</div>
+                            <img src="images/dg_class_8_corrosive_1767451302875.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 8 Corrosive">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">විඛාදන ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">9.
+                                その他<br>Miscellaneous</div>
+                            <img src="images/dg_class_9_misc_1767451378803.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 9 Misc">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">වෙනත් (Dry Ice)</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Handling Labels -->
+                    <h4 style="border-left: 5px solid #2980b9; padding-left: 10px; margin: 30px 0 20px;">② Handling
+                        Labels (ප්‍රවාහන ක්‍රම ලේබල්)</h4>
+                    <p style="margin-bottom:15px; font-size:0.95em;">
+                        <span class="japanese-term">輸送方法を示すラベル</span> (Yusō hōhō o shimesu raberu).
+                    </p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-bottom: 40px;">
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#d9534f; margin-bottom: 5px;">
+                                Cargo Aircraft Only<br><span style="color:#555; font-weight:normal;">貨物機専用</span></div>
+                            <img src="./images/dg_cargo_aircraft_only_1767451397655.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="CAO">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#5cb85c; margin-bottom: 5px;">
+                                Cryogenic Liquid<br><span style="color:#555; font-weight:normal;">極低温液体</span></div>
+                            <img src="./images/dg_cryogenic_liquid_1767451419230.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Cryogenic">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#d9534f; margin-bottom: 5px;">
+                                Keep Away From Heat<br><span style="color:#555; font-weight:normal;">熱源からの隔離</span>
+                            </div>
+                            <img src="./images/dg_keep_away_from_heat_1767451473148.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Heat">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#0275d8; margin-bottom: 5px;">
+                                Magnetized Material<br><span style="color:#555; font-weight:normal;">磁性物質</span></div>
+                            <img src="./images/dg_magnetized_material_1767451436795.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Magnet">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div style="font-size:0.8em; height: 40px; font-weight:bold; margin-bottom: 5px;">Lithium
+                                Battery<br><span style="color:#555; font-weight:normal;">リチウム電池</span></div>
+                            <img src="./images/dg_lithium_battery_1767451550139.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Lithium">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div style="font-size:0.8em; height: 40px; font-weight:bold; margin-bottom: 5px;">
+                                Environmental Hazard<br><span style="color:#555; font-weight:normal;">環境有害物質</span>
+                            </div>
+                            <img src="./images/dg_environmental_hazard_1767451572037.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Environmental">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OFFICIAL NOTE START -->
+                <div class="official-note">
+                    <h5><i class="fas fa-scroll"></i> Official Curriculum Note: Dangerous Goods Classes</h5>
+                    <p style="margin-bottom:10px;">Dangerous Goods are classified into 9 classes.</p>
+                    <div class="table-container">
+                        <table class="ios-table">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Japanese (ජප්පන්)</th>
+                                    <th>Sinhala (සිංහල)</th>
+                                    <th>Examples (උදාහරණ)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Class 1</strong></td>
+                                    <td>火薬類 (Kayakurui)</td>
+                                    <td>පුපුරණ ද්‍රව්‍ය</td>
+                                    <td>Fireworks, Ammunition</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 2</strong></td>
+                                    <td>高圧ガス (Kōatsu Gasu)</td>
+                                    <td>අධි පීඩන වායු</td>
+                                    <td>Gas Lighters, Hair Spray</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 3</strong></td>
+                                    <td>引火性液体 (Inkasē Ekitai)</td>
+                                    <td>දැවෙනසුළු දියර</td>
+                                    <td>Paints, Perfume, Alcohol</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 4</strong></td>
+                                    <td>可燃性物質 (Kanensē Busshitsu)</td>
+                                    <td>දැවෙනසුළු ඝන ද්‍රව්‍ය</td>
+                                    <td>Matches, Metal Powder</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 5</strong></td>
+                                    <td>酸化性物質 (Sankasē Busshitsu)</td>
+                                    <td>ඔක්සිකාරක ද්‍රව්‍ය</td>
+                                    <td>Oxygen Generators</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 6</strong></td>
+                                    <td>毒物 (Dokubutsu)</td>
+                                    <td>විෂ සහ බෝවන ද්‍රව්‍ය</td>
+                                    <td>Pesticides, Medical Waste</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 7</strong></td>
+                                    <td>放射性物質 (Hōshasē Busshitsu)</td>
+                                    <td>විකිරණශීලී ද්‍රව්‍ය</td>
+                                    <td>Uranium, X-ray equipment</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 8</strong></td>
+                                    <td>腐食性物質 (Fushokusē Busshitsu)</td>
+                                    <td>ඛාදනය වන ද්‍රව්‍ය</td>
+                                    <td>Strong Acids, Batteries</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Class 9</strong></td>
+                                    <td>その他の有害物件</td>
+                                    <td>වෙනත් අනතුරුදායක දේ</td>
+                                    <td>Lithium Batteries, Dry Ice</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- OFFICIAL NOTE END -->
+        </div>
+        </article>
+
+        </article>
+
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        function openSection(sectionId, tabElement) {
+            // Hide all sections
+            document.querySelectorAll('.theory-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+
+            // Deactivate all tabs
+            document.querySelectorAll('.folder-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Show target section
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            // Activate clicked tab
+            if (tabElement) {
+                tabElement.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

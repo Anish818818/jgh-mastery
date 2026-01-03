@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Quiz | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="codes.html">Codes</a>
+            <a href="quiz.html" class="active">Quiz</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2 class="section-title">Paper Quiz (පසුගිය ප්‍රශ්න පත්‍ර)</h2>
+
+        <!-- Paper Selection Menu -->
+        <div id="quiz-menu" style="max-width: 900px; margin: 0 auto;">
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <!-- Paper 1 -->
+                <div class="card" onclick="startSection('section1')" style="cursor:pointer; text-align: center;">
+                    <div class="card-icon"
+                        style="background:#e3f2fd; color:#2196f3; font-size: 2rem; margin-bottom: 15px;">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h4>Paper 1</h4>
+                    <p>Ground Handling Test</p>
+                    <p style="font-size: 0.8rem; color: #666;">11 Questions</p>
+                </div>
+            </div>
+            <a href="quiz.html" class="btn btn-secondary"
+                style="margin-top: 30px; display:block; width: fit-content; margin-inline: auto;">Back to Quiz Menu</a>
+        </div>
+
+        <!-- Quiz Container (Hidden initially) -->
+        <div id="quiz-container" style="display: none; margin-top: 30px;"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

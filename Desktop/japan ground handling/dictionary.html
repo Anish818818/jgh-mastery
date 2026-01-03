@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html" class="active">Dictionary</a>
+            <a href="codes.html">Codes</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2 class="section-title">Term Dictionary</h2>
+        <div style="max-width: 600px; margin: 0 auto 3rem auto;">
+            <input type="text" id="searchInput" placeholder="Search for terms..."
+                style="width: 100%; padding: 1rem; border-radius: 50px; border: 1px solid #ddd; font-size: 1rem;">
+        </div>
+
+        <div id="dictionary-grid" class="features-grid">
+            <!-- Terms will be loaded here -->
+            <div class="card">
+                <h3>Sample Term</h3>
+                <p><strong>Meaning:</strong> Example meaning</p>
+                <p><strong>Sinhala:</strong> උදාහරණ</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

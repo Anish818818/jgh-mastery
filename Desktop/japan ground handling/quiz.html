@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="codes.html">Codes</a>
+            <a href="quiz.html" class="active">Quiz</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2 class="section-title">Knowledge Check (දැනුම මිනුම)</h2>
+
+        <!-- Quiz Mode Selection -->
+        <div id="quiz-menu" style="max-width: 900px; margin: 0 auto;">
+            <div class="folder-grid" style="justify-content: center; flex-wrap: wrap;">
+                <!-- Mock Test Card -->
+                <div class="folder-card" id="btn-mock-test" onclick="startMockTest()">
+                    <div class="folder-icon" style="background: rgba(255, 71, 87, 0.1); color: var(--primary-color);"><i
+                            class="fas fa-laptop-code"></i></div>
+                    <h3>Mock Test</h3>
+                    <p>Interactive Quiz (ප්‍රශ්න විචාරාත්මක)</p>
+                </div>
+
+                <!-- Paper Quiz Card -->
+                <a href="paper_quiz.html" style="text-decoration: none; color: inherit;">
+                    <div class="folder-card">
+                        <div class="folder-icon" style="background: rgba(46, 204, 113, 0.1); color: #2ecc71;"><i
+                                class="fas fa-file-alt"></i></div>
+                        <h3>Paper Quiz</h3>
+                        <p>Past Papers (පසුගිය ප්‍රශ්න පත්‍ර)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Active Quiz Container (Hidden by default) -->
+        <div id="quiz-container" style="display: none; margin-top: 30px;">
+            <!-- Quiz content will be injected here by app.js -->
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

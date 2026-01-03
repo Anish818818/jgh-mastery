@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="codes.html">Codes</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="profile.html" class="active">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div id="login-modal"
+        style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); display:none; justify-content:center; align-items:center; z-index:1000;">
+        <div class="card" style="max-width:400px; width:90%; padding:30px; text-align:center;">
+            <div style="font-size:3rem; margin-bottom:10px;">👋</div>
+            <h2 style="color:var(--text-color);">Welcome!</h2>
+            <p style="margin-bottom:20px; color:#666;">Enter your name to start tracking progress.</p>
+            <input type="text" id="login-name-input" placeholder="Your Name"
+                style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px; font-size:1rem;">
+            <button onclick="performLogin()" class="btn btn-primary" style="width:100%;">Get Started</button>
+        </div>
+    </div>
+
+    <section class="container" style="max-width: 900px;">
+        <h2 class="section-title">My Profile</h2>
+
+        <!-- User Info Card -->
+        <div class="card"
+            style="text-align: left; padding: 2rem; display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap;">
+            <div
+                style="background: var(--bg-color); border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-light);">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div style="flex: 1;">
+                <h3 id="user-name-display" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Student</h3>
+                <p id="user-joined" style="color: var(--text-light); font-size: 0.9rem;">Joined: Today</p>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                    <button onclick="logoutUser()" class="btn btn-secondary"
+                        style="margin-top: 10px; padding: 5px 15px; font-size: 0.8rem; background:#fee; color:#c0392b; border-color:#fab;">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+            <!-- Progress Chart Section -->
+            <div class="card" style="padding: 20px;">
+                <h3 style="margin-bottom: 15px;"><i class="fas fa-chart-line" style="color:var(--accent-color);"></i>
+                    Performance Chart</h3>
+                <div style="position: relative; height:250px; width:100%">
+                    <canvas id="progressChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Leaderboard Section -->
+            <div class="card" style="padding: 20px;">
+                <h3 style="margin-bottom: 15px;"><i class="fas fa-trophy" style="color:gold;"></i> Leaderboard</h3>
+                <table style="width:100%; border-collapse:collapse; text-align:left;">
+                    <thead style="border-bottom: 2px solid #eee;">
+                        <tr>
+                            <th style="padding:10px;">Rank</th>
+                            <th style="padding:10px;">Student</th>
+                            <th style="padding:10px;">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLogin();
+            updateStreak();
+            // Theme toggle initialization if present in app.js
+        });
+
+        function checkLogin() {
+            const name = localStorage.getItem('studentName');
+            if (!name) {
+                document.getElementById('login-modal').style.display = 'flex';
+            } else {
+                loadProfile(name);
+                initChart();
+                renderLeaderboard(name);
+            }
+        }
+
+        function performLogin() {
+            const name = document.getElementById('login-name-input').value.trim();
+            if (name) {
+                localStorage.setItem('studentName', name);
+                localStorage.setItem('joinDate', new Date().toLocaleDateString());
+                document.getElementById('login-modal').style.display = 'none';
+                checkLogin();
+            }
+        }
+
+        function logoutUser() {
+            if (confirm('Log out?')) {
+                localStorage.removeItem('studentName');
+                location.reload();
+            }
+        }
+
+        function loadProfile(name) {
+            document.getElementById('user-name-display').textContent = name;
+            const joinDate = localStorage.getItem('joinDate') || 'Today';
+            document.getElementById('user-joined').textContent = `Joined: ${joinDate}`;
+        }
+
+        function updateStreak() {
+            // Reusing existing streak logic if needed, or simply keeping it alive in localStorage
+            const lastLogin = localStorage.getItem('lastLoginDate');
+            const today = new Date().toDateString();
+            let streak = parseInt(localStorage.getItem('studyStreak') || 0);
+
+            if (lastLogin !== today) {
+                const yesterday = new Date();
+                yesterday.setDate(yesterday.getDate() - 1);
+                if (lastLogin === yesterday.toDateString()) streak++;
+                else if (!lastLogin) streak = 1;
+                // Don't reset if just skipped a day for now to be kind, or reset strictly? 
+                // Strict: else streak = 1;
+
+                localStorage.setItem('studyStreak', streak);
+                localStorage.setItem('lastLoginDate', today);
+            }
+        }
+
+        function initChart() {
+            const ctx = document.getElementById('progressChart').getContext('2d');
+
+            // Get scores from localStorage
+            const mockScore = parseInt(localStorage.getItem('quizBestScore') || 0);
+            const paper1Score = parseInt(localStorage.getItem('paper1Score') || 0);
+            const codesScore = parseInt(localStorage.getItem('codesQuizScore') || 0);
+
+            // Calculate Total for Leaderboard
+            const totalScore = mockScore + paper1Score + codesScore;
+            localStorage.setItem('totalScore', totalScore);
+
+            // Create Gradients
+            let gradientMock = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientMock.addColorStop(0, '#ff9a9e');
+            gradientMock.addColorStop(1, '#fecfef');
+
+            let gradientPaper = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientPaper.addColorStop(0, '#a18cd1');
+            gradientPaper.addColorStop(1, '#fbc2eb');
+
+            let gradientCodes = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientCodes.addColorStop(0, '#84fab0');
+            gradientCodes.addColorStop(1, '#8fd3f4');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mock Test', 'Paper Quiz', 'Codes Quiz'],
+                    datasets: [{
+                        label: 'Score %',
+                        data: [mockScore, paper1Score, codesScore],
+                        backgroundColor: [
+                            gradientMock,
+                            gradientPaper,
+                            gradientCodes
+                        ],
+                        borderColor: [
+                            '#ff6b6b',
+                            '#8e44ad',
+                            '#2ecc71'
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 15, // Round corners
+                        barThickness: 40
+                    }]
+                },
+                options: {
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                font: { family: "'Inter', sans-serif" }
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                font: { family: "'Inter', sans-serif", weight: '600' }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                            titleColor: '#333',
+                            bodyColor: '#666',
+                            borderColor: '#ddd',
+                            borderWidth: 1,
+                            padding: 10,
+                            displayColors: false,
+                            callbacks: {
+                                label: function (context) {
+                                    return context.parsed.y + '%';
+                                }
+                            }
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        function renderLeaderboard(userName) {
+            const userScore = parseInt(localStorage.getItem('totalScore') || 0);
+
+            // Mock Data
+            let leaderboardData = [
+                { name: 'Kasun (Admin)', score: 280 },
+                { name: 'Sadeepa', score: 245 },
+                { name: 'Nimesh', score: 210 },
+                { name: 'Amila', score: 180 },
+                { name: 'Dilshan', score: 150 }
+            ];
+
+            // Add Current User if not top
+            const userEntry = { name: userName + " (You)", score: userScore, isUser: true };
+            leaderboardData.push(userEntry);
+
+            // Sort
+            leaderboardData.sort((a, b) => b.score - a.score);
+
+            // Render
+            const tbody = document.getElementById('leaderboard-body');
+            tbody.innerHTML = '';
+
+            leaderboardData.forEach((student, index) => {
+                const tr = document.createElement('tr');
+                if (student.isUser) tr.style.backgroundColor = '#e3f2fd';
+
+                let rankIcon = index + 1;
+                if (index === 0) rankIcon = '🥇';
+                if (index === 1) rankIcon = '🥈';
+                if (index === 2) rankIcon = '🥉';
+
+                tr.innerHTML = `
+                    <td style="padding:10px; font-weight:bold;">${rankIcon}</td>
+                    <td style="padding:10px;">${student.name}</td>
+                    <td style="padding:10px; font-weight:bold; color:var(--primary-color)">${student.score}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+    </script>
+</body>
+
+</html>
