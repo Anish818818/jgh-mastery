@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Theory | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html" class="active">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="profile.html">Profile</a>
+        </div>
+    </nav>
+
+    <section class="container" style="max-width: 1200px; padding: 0 15px;">
+        <h2 class="section-title">Full Theory Course (සමස්ත විෂය නිර්දේශය)</h2>
+
+        <!-- Folder/Tab Navigation (5 Main Topics) -->
+        <div class="folder-grid">
+            <div class="folder-card active" onclick="openSection('section-basic', this)">
+                <div class="folder-icon"><i class="fas fa-book-reader"></i></div>
+                <h3>01. Basic Knowledge</h3>
+                <p>මූලික දැනුම</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-ramp', this)">
+                <div class="folder-icon"><i class="fas fa-plane-arrival"></i></div>
+                <h3>02. Ramp Safety</h3>
+                <p>රැම්ප් ආරක්ෂාව</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-gse', this)">
+                <div class="folder-icon"><i class="fas fa-truck-moving"></i></div>
+                <h3>03. GSE Operations</h3>
+                <p>GSE මෙහෙයුම්</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-cargo', this)">
+                <div class="folder-icon"><i class="fas fa-boxes"></i></div>
+                <h3>04. Cargo & Baggage</h3>
+                <p>බඩු බාහිරාදිය</p>
+            </div>
+            <div class="folder-card" onclick="openSection('section-dg', this)">
+                <div class="folder-icon"><i class="fas fa-radiation"></i></div>
+                <h3>05. Dangerous Goods</h3>
+                <p>අන්තරායකර භාණ්ඩ</p>
+            </div>
+        </div>
+
+        <div class="content-area">
+
+            <!-- SECTION 01: BASIC KNOWLEDGE -->
+            <article class="theory-section active" id="section-basic">
+                <div class="section-header">
+                    <span>01. Basic Knowledge (මූලික දැනුම)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">基礎知識 (Kiso Chishiki)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Aircraft Types (ගුවන් යානා වර්ග)</h4>
+                        <div class="jp-block">航空機の種類 (Kōkūki no Shurui)</div>
+                        <p>
+                            ගුවන් යානා ප්‍රධාන වශයෙන් වර්ග දෙකකි:
+                        </p>
+                        <ul>
+                            <li><strong>Passenger Aircraft (<span class="japanese-term">旅客機 -
+                                        Ryokakuki</span>):</strong>
+                                මගීන් ප්‍රවාහනය කරයි. (උදා: Boeing 747, Airbus A380)</li>
+                            <li><strong>Cargo Aircraft (<span class="japanese-term">貨物機 - Kamotsuki</span>):</strong>
+                                භාණ්ඩ ප්‍රවාහනය කරයි. (උදා: Boeing 747F, Airbus A300-600ST Beluga)</li>
+                        </ul>
+                        <p class="learning-point">
+                            සමහර ගුවන් යානා මගීන් සහ භාණ්ඩ යන දෙකම ප්‍රවාහනය කරයි (Combi Aircraft).
+                        </p>
+                    </div>
+                    <div class="media-content">
+                        <img src="aircraft_types.png" alt="Aircraft Types"
+                            onerror="this.src='https://placehold.co/400x300?text=Aircraft+Types'">
+                        <div class="caption">Passenger vs. Cargo Aircraft</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. Aircraft Parts (ගුවන් යානා කොටස්)</h4>
+                        <div class="jp-block">航空機の部位 (Kōkūki no Bui)</div>
+                        <p>
+                            ගුවන් යානයක ප්‍රධාන කොටස්:
+                        </p>
+                        <ul>
+                            <li><strong>Fuselage (<span class="japanese-term">胴体 - Dōtai</span>):</strong> යානයේ ප්‍රධාන
+                                ශරීරය.</li>
+                            <li><strong>Wings (<span class="japanese-term">翼 - Tsubasa</span>):</strong> පියාපත්.</li>
+                            <li><strong>Engines (<span class="japanese-term">エンジン - Enjin</span>):</strong> එන්ජින්.
+                            </li>
+                            <li><strong>Tail (<span class="japanese-term">尾翼 - Biyoku</span>):</strong> වලිගය.</li>
+                            <li><strong>Landing Gear (<span class="japanese-term">着陸装置 - Chakuriku
+                                        Sōchi</span>):</strong>
+                                ගොඩබෑමේ ආම්පන්න.</li>
+                        </ul>
+                    </div>
+                    <div class="media-content">
+                        <img src="aircraft_parts.png" alt="Aircraft Parts"
+                            onerror="this.src='https://placehold.co/400x300?text=Aircraft+Parts'">
+                        <div class="caption">Main Parts of an Aircraft</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>C. Airport Layout (ගුවන් තොටුපල සැකැස්ම)</h4>
+                        <div class="jp-block">空港の配置 (Kūkō no Haichi)</div>
+                        <p>
+                            ගුවන් තොටුපලක ප්‍රධාන අංග:
+                        </p>
+                        <ul>
+                            <li><strong>Runway (<span class="japanese-term">滑走路 - Kassōro</span>):</strong> ගුවන් යානා
+                                ගොඩබසින සහ ගුවන් ගත වන මාර්ගය.</li>
+                            <li><strong>Taxiway (<span class="japanese-term">誘導路 - Yūdōro</span>):</strong> ගුවන් යානා
+                                ධාවන පථය සහ ගේට්ටුව අතර ගමන් කරන මාර්ගය.</li>
+                            <li><strong>Apron/Ramp (<span class="japanese-term">エプロン/駐機場 -
+                                        Epuron/Chūkijō</span>):</strong>
+                                ගුවන් යානා නවත්වන, භාණ්ඩ පටවන/බාන, මගීන් නංවන/බස්සන ප්‍රදේශය.</li>
+                            <li><strong>Terminal (<span class="japanese-term">ターミナル - Tāminaru</span>):</strong> මගීන්
+                                පිටත්වීම්/පැමිණීම් සිදු කරන ගොඩනැගිල්ල.</li>
+                        </ul>
+                    </div>
+                    <div class="media-content">
+                        <img src="airport_layout.png" alt="Airport Layout"
+                            onerror="this.src='https://placehold.co/400x300?text=Airport+Layout'">
+                        <div class="caption">Key Areas of an Airport</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 02: RAMP SAFETY -->
+            <article class="theory-section" id="section-ramp">
+                <div class="section-header">
+                    <span>02. Ramp Safety (රැම්ප් ආරක්ෂාව)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">ランプの安全 (Ranpu no Anzen)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Danger Zones (අනතුරුදායක කලාප)</h4>
+                        <div class="jp-block">危険区域 (Kiken Kuiki)</div>
+                        <p>
+                            ගුවන් යානයක් වටා ඇති අනතුරුදායක කලාප:
+                        </p>
+                        <ul>
+                            <li><strong>Blast (<span class="japanese-term">ブラスト</span>):</strong> එන්ජිම පිටුපසින්
+                                නික්මෙන අධික වායු ධාරාව. සුළඟ. වේගය 25m/s (Typhoon level). අධික තාපය.</li>
+                            <li><strong>Intake (<span class="japanese-term">インテーク</span>):</strong> එන්ජිම ඉදිරිපස ඇති
+                                චූෂණ
+                                බලය. (Suction). මිනිසුන්ව ඇද ගත හැක.</li>
+                        </ul>
+                        <p class="learning-point">අවවාදයයි: කවදාවත් එන්ජිම ඉදිරිපසට යන්න එපා.</p>
+                    </div>
+                    <div class="full-width-section">
+                        <img src="danger_zone_diagram_new.png" alt="Danger Zone Diagram New"
+                            onerror="this.src='https://placehold.co/800x300?text=Danger+Zone+Diagram'">
+                        <div class="caption">Figure 4: Intake & Exhaust Hazard Areas (Critical Safety)</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="img_16_114.jpg" alt="Engine Danger Zones" style="max-width: 300px; margin: 0 auto;"
+                            onerror="this.src='https://placehold.co/300x200?text=Danger+Zone+Image'">
+                        <div class="caption">Blast & Intake Danger Areas (Simplified)</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. Marshalling Signals (හස්ත සංඥා)</h4>
+                        <div class="jp-block">マーシャリング (Marshalling)</div>
+
+                        <div class="jp-paragraph">
+                            ウォッチマンと他の担当者が合図を通じて、航空機を安全に目標場所へ移動できるよう監視し、導く作業である。
+                        </div>
+
+                        <p>
+                            ගුවන් යානය හසුරවන්නේ "මාෂල්" වරයා විසිනි. ඔහුගේ සංඥා වලට පමනක් නියමුවා අවනත වේ.
+                            <br>
+                            "All Clear", "Stop", "Turn Left" ආදී සංඥා හඳුනාගන්න.
+                        </p>
+                    </div>
+                    <div class="full-width-section">
+                        <img src="marshalling_whistle_signals.png" alt="Marshalling Signals with Whistle Commands"
+                            style="border: 2px solid #e67e22;"
+                            onerror="this.src='https://placehold.co/800x300?text=Marshalling+Signals'">
+                        <div class="caption">Figure 5: Master Signal Chart (Hand & Whistle Commands)</div>
+                    </div>
+                    <div class="media-content">
+                        <img src="marshalling_signals_new.png" alt="Marshalling Signals New"
+                            onerror="this.src='https://placehold.co/400x300?text=Signal+Guide'">
+                        <div class="caption">Essential Signals (All Clear / Emergency Stop)</div>
+                    </div>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>C. PPE & Checks (ආරක්ෂක ඇඳුම්)</h4>
+
+                        <div class="jp-paragraph">
+                            航空機地上作業において、その作業内容により、人身事故を未然に防止するため、さまざまな防具（手袋・安全ベルト・ヘルメット・帽子・耳栓 等）が使用されている。
+                            作業員は、着用している作業服のボタン、ファスナおよび靴の紐などを正しく締めなければならない。
+                        </div>
+
+                        <p>
+                            අනිවාර්ය ආරක්ෂක උපකරණ (<span class="japanese-term">保護具 - Hogogu</span>):
+                        </p>
+                        <ul>
+                            <li>Helmet (හෙල්මට්)</li>
+                            <li>Safety Shoes (ආරක්ෂක සපත්තු)</li>
+                            <li>Ear Plugs (ශබ්ද ආවරණ)</li>
+                            <li>Safety Vest (පරාවර්තක කබාය)</li>
+                        </ul>
+                        <p>වැඩ අවසන් වූ පසු නැවත පරීක්ෂා කරන්න (Final Check).</p>
+                    </div>
+                    <div class="media-content">
+                        <div class="sm-grid">
+                            <img src="img_18_151.jpg" alt="PPE Items"
+                                onerror="this.src='https://placehold.co/100x100?text=PPE'">
+                            <img src="img_18_152.jpg" alt="Helmet"
+                                onerror="this.src='https://placehold.co/100x100?text=Helmet'">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 03: GSE OPERATIONS -->
+            <article class="theory-section" id="section-gse">
+                <div class="section-header">
+                    <span>03. GSE Operations (GSE මෙහෙයුම්)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">GSEの操作 (GSE no Sosa)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Vehicle Safety (වාහන ආරක්ෂාව)</h4>
+                        <div class="jp-paragraph">
+                            車両を運転する際は、制限速度を遵守し、航空機優先の原則を守らなければならない。
+                        </div>
+                        <p>ගුවන් තොටුපලේ වාහන ධාවනය:</p>
+                        <div class="highlight-box">
+                            <ul>
+                                <li><strong>Priority:</strong> ගුවන් යානයට සැමවිටම ඉඩ දෙන්න.</li>
+                                <li><strong>Speed Limit:</strong> සාමාන්‍ය පාරේ 30km/h, යානය අසල 15km/h (හෝ ඊට අඩුවෙන්).
+                                </li>
+                                <li><strong>Stop Check:</strong> යානයට ලං වීමට පෙර අනිවාර්යයෙන්ම නැවතී පරීක්ෂා කරන්න.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="media-content">
+                        <img src="img_10_103.jpg" alt="GSE Vehicle"
+                            onerror="this.src='https://placehold.co/400x300?text=GSE'">
+                        <div class="caption">Ground Service Equipment</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 04: CARGO & BAGGAGE -->
+            <article class="theory-section" id="section-cargo">
+                <div class="section-header">
+                    <span>04. Cargo & Baggage (බඩු හා භාණ්ඩ)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">貨物・手荷物 (Kamotsu/Tenimotsu)</span>
+                </div>
+
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>A. Baggage Handling (මගී බඩු පරිහරණය)</h4>
+                        <div class="jp-paragraph">
+                            手荷物は、お客様の大切な財産であり、慎重に取り扱わなければならない。
+                        </div>
+                        <p>මගීන්ගේ බෑග් (Baggage) පරිහරණය:</p>
+                        <ul>
+                            <li>විසි කරන්න එපා (Do not throw).</li>
+                            <li>ඇදගෙන යන්න එපා (Do not drag).</li>
+                            <li>තෙමෙන්න දෙන්න එපා (Keep dry).</li>
+                            <li>Heavy ටැග් ගැසූ බෑග් පරිස්සමින් උස්සන්න.</li>
+                        </ul>
+                    </div>
+                    <div class="media-content">
+                        <div style="background:#fff3e0; padding:20px; border-radius:8px; text-align:center;">
+                            <span style="font-size:3rem;">🧳👜</span>
+                            <p>Handle with Care!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="topic-row">
+                    <div class="text-content">
+                        <h4>B. ULD (Unit Load Device)</h4>
+                        <p>ගුවන් යානයට බඩු පටවන්නේ <strong>ULD</strong> (Container / Pallet) වල දමාය.</p>
+                        <p>මේවා යානය ඇතුලේ අගුලු දමනු ලැබේ (Locks). ULD එකක් හානි වී ඇත්නම් (Damaged) පාවිච්චි නොකරන්න.
+                        </p>
+                    </div>
+                    <div class="media-content">
+                        <img src="img_6_10.jpg" alt="ULD Container"
+                            onerror="this.src='https://placehold.co/400x300?text=ULD+Image'">
+                        <div class="caption">ULD Container</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- SECTION 05: DANGEROUS GOODS -->
+            <article class="theory-section" id="section-dg">
+                <div class="section-header">
+                    <span>05. Dangerous Goods (අන්තරායකර භාණ්ඩ)</span>
+                    <span style="font-size: 0.8em; opacity: 0.8;">危険物 (Kikenbutsu)</span>
+                </div>
+
+                <div class="jp-paragraph">
+                    航空機に爆破物、発火・引火しやすいもの、銃砲刀剣類などの危険物を搭載することは禁止されている。
+                </div>
+
+                <p style="margin-bottom: 20px;">
+                    ගුවන් යානයට හානි කළ හැකි හෝ මිනිසුන්ට අනතුරුදායක ද්‍රව්‍ය "Dangerous Goods" ලෙස හැඳින්වේ.
+                </p>
+
+                <div class="table-container">
+                    <!-- 1. Hazard Class Labels -->
+                    <h4 style="border-left: 5px solid #d35400; padding-left: 10px; margin: 20px 0;">① Hazard Class
+                        Labels (අන්තරායකර පන්ති ලේබල්)</h4>
+                    <p style="margin-bottom:15px; font-size:0.95em;">
+                        අන්තරායකර භාණ්ඩ පන්ති 9 කට බෙදා ඇත.
+                        <br><span class="japanese-term">危険性を示すラベル</span> (Kikensei o shimesu raberu)
+                    </p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 40px; text-align: center;">
+                        <!-- Row 1 -->
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">1.
+                                火薬類<br>Explosives</div>
+                            <img src="images/dg_class_1_explosives_1767450976858.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 1 Explosives">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">වෙඩි බෙහෙත්</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">2.
+                                高圧ガス<br>Gases</div>
+                            <img src="images/dg_class_2_gases_1767450996266.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 2 Gases">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">අධි පීඩන වායු</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">3.
+                                引火性液体<br>Flammable Liquid</div>
+                            <img src="images/dg_class_3_flammable_liquid_1767451016014.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 3 Flammable Liquid">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">දැවෙනසුළු දියර</div>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#d9534f;">4.
+                                可燃性物質<br>Flammable Solid</div>
+                            <img src="images/dg_class_4_flammable_solid_1767451102763.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 4 Flammable Solid">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">ගිනිගන්නා ඝන ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#f0ad4e;">5.
+                                酸化性物質<br>Oxidizer</div>
+                            <img src="images/dg_class_5_oxidizer_1767451141638.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 5 Oxidizer">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">ඔක්සිකාරක ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">6.
+                                毒物類<br>Toxic</div>
+                            <img src="images/dg_class_6_toxic_1767451159767.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 6 Toxic">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">විෂ සහිත ද්‍රව්‍ය</div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">7.
+                                放射性物質<br>Radioactive</div>
+                            <img src="images/dg_class_7_radioactive_1767451258480.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 7 Radioactive">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">විකිරණශීලී ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">8.
+                                腐食性物質<br>Corrosive</div>
+                            <img src="images/dg_class_8_corrosive_1767451302875.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 8 Corrosive">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">විඛාදන ද්‍රව්‍ය</div>
+                        </div>
+                        <div
+                            style="border: 1px solid #ccc; padding: 10px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                            <div style="font-weight:bold; margin-bottom:8px; font-size:0.9em; color:#333;">9.
+                                その他<br>Miscellaneous</div>
+                            <img src="images/dg_class_9_misc_1767451378803.png"
+                                style="width:120px; display:block; margin:0 auto;" alt="Class 9 Misc">
+                            <div style="font-size:0.8em; color:#555; margin-top:8px;">වෙනත් (Dry Ice)</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Handling Labels -->
+                    <h4 style="border-left: 5px solid #2980b9; padding-left: 10px; margin: 30px 0 20px;">② Handling
+                        Labels (ප්‍රවාහන ක්‍රම ලේබල්)</h4>
+                    <p style="margin-bottom:15px; font-size:0.95em;">
+                        <span class="japanese-term">輸送方法を示すラベル</span> (Yusō hōhō o shimesu raberu).
+                    </p>
+
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 15px; margin-bottom: 40px;">
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#d9534f; margin-bottom: 5px;">
+                                Cargo Aircraft Only<br><span style="color:#555; font-weight:normal;">貨物機専用</span></div>
+                            <img src="images/dg_cargo_aircraft_only_1767451397655.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="CAO">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#5cb85c; margin-bottom: 5px;">
+                                Cryogenic Liquid<br><span style="color:#555; font-weight:normal;">極低温液体</span></div>
+                            <img src="images/dg_cryogenic_liquid_1767451419230.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Cryogenic">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#d9534f; margin-bottom: 5px;">
+                                Keep Away From Heat<br><span style="color:#555; font-weight:normal;">熱源からの隔離</span>
+                            </div>
+                            <img src="images/dg_keep_away_from_heat_1767451473148.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Heat">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div
+                                style="font-size:0.8em; height: 40px; font-weight:bold; color:#0275d8; margin-bottom: 5px;">
+                                Magnetized Material<br><span style="color:#555; font-weight:normal;">磁性物質</span></div>
+                            <img src="images/dg_magnetized_material_1767451436795.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Magnet">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div style="font-size:0.8em; height: 40px; font-weight:bold; margin-bottom: 5px;">Lithium
+                                Battery<br><span style="color:#555; font-weight:normal;">リチウム電池</span></div>
+                            <img src="images/dg_lithium_battery_1767451550139.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Lithium">
+                        </div>
+                        <div
+                            style="text-align: center; border: 1px solid #eee; padding: 10px; background: #fff; border-radius: 6px;">
+                            <div style="font-size:0.8em; height: 40px; font-weight:bold; margin-bottom: 5px;">
+                                Environmental Hazard<br><span style="color:#555; font-weight:normal;">環境有害物質</span>
+                            </div>
+                            <img src="images/dg_environmental_hazard_1767451572037.png"
+                                style="width:90px; margin:0 auto; border:1px solid #eee;" alt="Environmental">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        function openSection(sectionId, tabElement) {
+            // Hide all sections
+            document.querySelectorAll('.theory-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+
+            // Deactivate all tabs
+            document.querySelectorAll('.folder-card').forEach(card => {
+                card.classList.remove('active');
+            });
+
+            // Show target section
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.classList.add('active');
+            }
+
+            // Activate clicked tab
+            if (tabElement) {
+                tabElement.classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

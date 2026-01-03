@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | JGH</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">🇯🇵 JGH Mastery</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="theory.html">Full Theory</a>
+            <a href="notes.html">Short Notes</a>
+            <a href="dictionary.html">Dictionary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="profile.html" class="active">Profile</a>
+            <button id="theme-toggle" class="theme-btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <section class="container" style="max-width: 800px;">
+        <h2 class="section-title">My Profile</h2>
+
+        <!-- User Info Card -->
+        <div class="card"
+            style="text-align: left; padding: 2rem; display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
+            <div
+                style="background: var(--bg-color); border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-light);">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div style="flex: 1;">
+                <h3 id="user-name-display" style="font-size: 1.5rem; margin-bottom: 0.5rem;">Student</h3>
+                <p id="user-joined" style="color: var(--text-light); font-size: 0.9rem;">Joined: Today</p>
+                <button onclick="editProfile()" class="btn btn-secondary"
+                    style="margin-top: 10px; padding: 5px 15px; font-size: 0.8rem;">Edit Name</button>
+            </div>
+        </div>
+
+        <!-- Name Edit Modal (Hidden by default) -->
+        <div id="edit-name-area" class="card" style="display: none; margin-bottom: 2rem;">
+            <h3>Update Profile</h3>
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <input type="text" id="name-input" placeholder="Enter your name"
+                    style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                <button onclick="saveName()" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <h3 style="margin-bottom: 1.5rem; color: var(--text-color);">Your Progress</h3>
+
+        <div class="features-grid">
+            <!-- Quiz Request -->
+            <div class="card">
+                <div class="card-icon" style="color: var(--accent-color);">🎯</div>
+                <h3>Quiz High Score</h3>
+                <p id="quiz-score-display"
+                    style="font-size: 2rem; font-weight: 800; color: var(--primary-color); margin: 10px 0;">0%</p>
+                <p style="font-size: 0.9rem; color: var(--text-light);">Best performance</p>
+            </div>
+
+            <!-- Learning Status (Mock for now, could be real later) -->
+            <div class="card">
+                <div class="card-icon" style="color: var(--secondary-color);">📚</div>
+                <h3>Readings</h3>
+                <p style="font-size: 2rem; font-weight: 800; color: var(--primary-color); margin: 10px 0;">Active</p>
+                <p style="font-size: 0.9rem; color: var(--text-light);">Keep reading the theory!</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <button onclick="clearProgress()"
+                style="background: none; border: none; color: #dc3545; cursor: pointer; text-decoration: underline;">Reset
+                All Progress</button>
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        // Profile Specific Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProfile();
+        });
+
+        function loadProfile() {
+            const name = localStorage.getItem('studentName') || 'Student';
+            document.getElementById('user-name-display').textContent = name;
+
+            const bestScore = localStorage.getItem('quizBestScore') || 0;
+            document.getElementById('quiz-score-display').textContent = bestScore + '%';
+        }
+
+        function editProfile() {
+            document.getElementById('edit-name-area').style.display = 'block';
+        }
+
+        function saveName() {
+            const newName = document.getElementById('name-input').value;
+            if (newName.trim()) {
+                localStorage.setItem('studentName', newName);
+                loadProfile();
+                document.getElementById('edit-name-area').style.display = 'none';
+            }
+        }
+
+        function clearProgress() {
+            if (confirm('Are you sure you want to delete your progress?')) {
+                localStorage.removeItem('quizBestScore');
+                localStorage.removeItem('studentName');
+                location.reload();
+            }
+        }
+    </script>
+</body>
+
+</html>
