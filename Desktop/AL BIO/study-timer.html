@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timer - A/L Bio Platform</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/timer.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo"><span>🎓</span><span>A/L Bio Platform</span></a>
+            <button class="navbar-toggle" id="navToggle">☰</button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/dashboard.html" class="navbar-link">Dashboard</a></li>
+                <li><a href="/biology.html" class="navbar-link">Biology</a></li>
+                <li><a href="/chemistry.html" class="navbar-link">Chemistry</a></li>
+                <li><a href="/physics.html" class="navbar-link">Physics</a></li>
+                <li><a href="/profile.html" class="navbar-link">Profile</a></li>
+                <li><button class="btn btn-sm btn-primary" id="themeToggle">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="timer-main">
+        <div class="container">
+            <div class="timer-container card">
+                <h1 class="text-center">⏱️ Pomodoro Study Timer</h1>
+                <p class="text-center text-secondary mb-lg">Stay focused with the Pomodoro technique</p>
+
+                <div class="timer-display">
+                    <div class="timer-circle">
+                        <svg width="300" height="300">
+                            <circle cx="150" cy="150" r="140" class="timer-circle-bg"></circle>
+                            <circle cx="150" cy="150" r="140" class="timer-circle-progress" id="timerProgress"></circle>
+                        </svg>
+                        <div class="timer-text">
+                            <div class="timer-time" id="timerDisplay">25:00</div>
+                            <div class="timer-label" id="timerLabel">Work Session</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer-controls">
+                    <button class="btn btn-lg btn-primary" id="startBtn">Start</button>
+                    <button class="btn btn-lg btn-secondary" id="pauseBtn" disabled>Pause</button>
+                    <button class="btn btn-lg btn-secondary" id="resetBtn">Reset</button>
+                </div>
+
+                <div class="timer-stats">
+                    <div class="stat-mini-box">
+                        <div class="stat-mini-value" id="sessionsCompleted">0</div>
+                        <div class="stat-mini-label">Sessions Today</div>
+                    </div>
+                    <div class="stat-mini-box">
+                        <div class="stat-mini-value" id="totalMinutes">0</div>
+                        <div class="stat-mini-label">Minutes Today</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/timer.js"></script>
+</body>
+
+</html>

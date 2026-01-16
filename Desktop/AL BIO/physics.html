@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics - A/L Bio Platform</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/subject.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo"><span>🎓</span><span>A/L Bio Platform</span></a>
+            <button class="navbar-toggle" id="navToggle">☰</button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/dashboard.html" class="navbar-link">Dashboard</a></li>
+                <li><a href="/biology.html" class="navbar-link">Biology</a></li>
+                <li><a href="/chemistry.html" class="navbar-link">Chemistry</a></li>
+                <li><a href="/physics.html" class="navbar-link active">Physics</a></li>
+                <li><a href="/profile.html" class="navbar-link">Profile</a></li>
+                <li><button class="btn btn-sm btn-primary" id="themeToggle">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="subject-header physics-header">
+        <div class="container">
+            <div class="subject-hero">
+                <div class="subject-icon-large">⚛️</div>
+                <div class="subject-info">
+                    <h1 class="subject-title">Physics</h1>
+                    <p class="subject-subtitle">භෞතික විද්‍යාව</p>
+                    <p class="subject-description">Understand the fundamental laws governing the universe</p>
+                </div>
+            </div>
+            <div class="subject-stats-bar">
+                <div class="stat-item"><span class="stat-label">Progress</span><span class="stat-value"
+                        id="progressPercentage">0%</span></div>
+                <div class="stat-item"><span class="stat-label">Completed</span><span class="stat-value"><span
+                            id="completedTopics">0</span>/<span id="totalTopics">0</span></span></div>
+                <div class="stat-item"><span class="stat-label">Quizzes</span><span class="stat-value"
+                        id="quizCount">0</span></div>
+                <div class="stat-item"><span class="stat-label">Avg Score</span><span class="stat-value"
+                        id="avgScore">0%</span></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="subject-main">
+        <div class="container">
+            <section class="subject-actions">
+                <a href="/quiz.html?subject=physics" class="btn btn-primary">📝 Take Quiz</a>
+                <a href="/flashcards.html?subject=physics" class="btn btn-secondary">🎴 Flashcards</a>
+                <a href="/practice.html?subject=physics" class="btn btn-secondary">✏️ Practice</a>
+            </section>
+            <section class="units-section">
+                <h2 class="section-title">Units & Topics</h2>
+                <div id="unitsContainer" class="units-container"></div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/subject.js"></script>
+</body>
+
+</html>

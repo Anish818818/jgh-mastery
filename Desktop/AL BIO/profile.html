@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - A/L Bio Platform</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/profile.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo"><span>🎓</span><span>A/L Bio Platform</span></a>
+            <button class="navbar-toggle" id="navToggle">☰</button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/dashboard.html" class="navbar-link">Dashboard</a></li>
+                <li><a href="/biology.html" class="navbar-link">Biology</a></li>
+                <li><a href="/chemistry.html" class="navbar-link">Chemistry</a></li>
+                <li><a href="/physics.html" class="navbar-link">Physics</a></li>
+                <li><a href="/profile.html" class="navbar-link active">Profile</a></li>
+                <li><button class="btn btn-sm btn-primary" id="themeToggle">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="profile-main">
+        <div class="container">
+            <div class="grid grid-2" style="grid-template-columns: 1fr 1.5fr; gap: 2rem;">
+                <!-- Left Column: User Profile Card -->
+                <section>
+                    <div class="profile-header-card">
+                        <div class="profile-avatar-container">
+                            <div class="profile-avatar">👤</div>
+                        </div>
+                        <h2 class="profile-name" id="displayUserName">Student</h2>
+                        <div class="profile-level">Level <span id="levelDisplay">1</span></div>
+
+                        <div class="profile-edit-form mt-md">
+                            <div class="form-group">
+                                <label for="userName">ඔබේ නම (Name)</label>
+                                <input type="text" id="userName" class="form-input" placeholder="ඇතුලත් කරන්න...">
+                            </div>
+                            <button class="btn btn-primary w-100" id="saveProfileBtn">Save Profile</button>
+                        </div>
+                    </div>
+
+                    <div class="card mt-lg">
+                        <h3 class="section-title">Statistics</h3>
+                        <div class="stats-list">
+                            <div class="setting-item">
+                                <span class="setting-label">Total Points</span>
+                                <span class="stat-value-sm" id="pointsDisplay">0</span>
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Day Streak</span>
+                                <span id="streakDisplay">0</span> 🔥
+                            </div>
+                            <div class="setting-item">
+                                <span class="setting-label">Quizzes Completed</span>
+                                <span id="quizzesDisplay">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Right Column: Settings & Achievements -->
+                <section>
+                    <!-- Stats Overview (Grid) -->
+                    <div class="stats-grid mb-lg">
+                        <div class="stat-box">
+                            <div class="stat-icon">🧬</div>
+                            <div class="stat-value">Bio</div>
+                            <div class="stat-label">Biology</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon">⚗️</div>
+                            <div class="stat-value">Chem</div>
+                            <div class="stat-label">Chemistry</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon">⚛️</div>
+                            <div class="stat-value">Phy</div>
+                            <div class="stat-label">Physics</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon">📊</div>
+                            <div class="stat-value">Rank</div>
+                            <div class="stat-label">#--</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="card mb-lg">
+                        <h2 class="section-title">Achievements 🏆</h2>
+                        <div id="achievementsGrid" class="achievements-grid">
+                            <!-- JS loads this -->
+                        </div>
+                    </div>
+
+                    <!-- Settings -->
+                    <div class="card">
+                        <h2 class="section-title">Settings ⚙️</h2>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-label">Theme / තේමාව</div>
+                                <div class="setting-description">Dark mode හෝ Light mode තෝරන්න</div>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" id="themeToggleBtn">Toggle Theme</button>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <div class="setting-label">Study Goal (Minutes)</div>
+                                <div class="setting-description">දිනකට අධ්‍යයන කාලය</div>
+                            </div>
+                            <input type="number" id="dailyGoal" class="form-input" value="120">
+                        </div>
+
+                        <div class="mt-md text-right">
+                            <button class="btn btn-primary" id="saveSettingsBtn">Save Settings</button>
+                        </div>
+                    </div>
+
+                    <div class="card mt-lg">
+                        <h3 class="section-title">Data</h3>
+                        <div class="data-actions">
+                            <button class="btn btn-secondary" id="exportDataBtn">Export Data</button>
+                            <button class="btn btn-warning" id="resetDataBtn">Reset Progress</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/profile.js"></script>
+</body>
+
+</html>

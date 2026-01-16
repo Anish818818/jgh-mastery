@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - A/L Bio Platform</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/quiz.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo"><span>🎓</span><span>A/L Bio Platform</span></a>
+            <button class="navbar-toggle" id="navToggle">☰</button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="/" class="navbar-link">Home</a></li>
+                <li><a href="/dashboard.html" class="navbar-link">Dashboard</a></li>
+                <li><a href="/biology.html" class="navbar-link">Biology</a></li>
+                <li><a href="/chemistry.html" class="navbar-link">Chemistry</a></li>
+                <li><a href="/physics.html" class="navbar-link">Physics</a></li>
+                <li><a href="/profile.html" class="navbar-link">Profile</a></li>
+                <li><button class="btn btn-sm btn-primary" id="themeToggle">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="quiz-main">
+        <div class="container">
+            <!-- Quiz Setup Screen -->
+            <div id="quizSetup" class="quiz-setup">
+                <div class="card quiz-setup-card">
+                    <h1 class="text-center">📝 Start a Quiz</h1>
+                    <p class="text-center text-secondary mb-lg">Test your knowledge and track your progress</p>
+
+                    <div class="form-group">
+                        <label for="subjectSelect">Select Subject</label>
+                        <select id="subjectSelect" class="form-select">
+                            <option value="biology">🧬 Biology</option>
+                            <option value="chemistry">⚗️ Chemistry</option>
+                            <option value="physics">⚛️ Physics</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="questionCount">Number of Questions</label>
+                        <select id="questionCount" class="form-select">
+                            <option value="5">5 Questions</option>
+                            <option value="10" selected>10 Questions</option>
+                            <option value="15">15 Questions</option>
+                            <option value="20">20 Questions</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-lg btn-primary" id="startQuizBtn" style="width: 100%;">
+                        Start Quiz 🚀
+                    </button>
+                </div>
+            </div>
+
+            <!-- Quiz Screen -->
+            <div id="quizScreen" class="quiz-screen" style="display: none;">
+                <div class="quiz-header">
+                    <div class="quiz-info">
+                        <span class="quiz-subject" id="quizSubject">Biology</span>
+                        <span class="quiz-progress">
+                            Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                        </span>
+                    </div>
+                    <div class="quiz-timer" id="quizTimer">00:00</div>
+                </div>
+
+                <div class="quiz-content card">
+                    <div class="question-section">
+                        <h2 class="question-text" id="questionText">Loading question...</h2>
+                    </div>
+
+                    <div class="options-section" id="optionsSection">
+                        <!-- Options will be loaded dynamically -->
+                    </div>
+
+                    <div class="quiz-actions">
+                        <button class="btn btn-secondary" id="prevBtn" disabled>← Previous</button>
+                        <button class="btn btn-primary" id="nextBtn">Next →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="resultsScreen" class="results-screen" style="display: none;">
+                <div class="card results-card">
+                    <div class="results-header">
+                        <div class="results-icon" id="resultsIcon">🎉</div>
+                        <h1 id="resultsTitle">Great Job!</h1>
+                        <p class="results-subtitle" id="resultsSubtitle">You've completed the quiz</p>
+                    </div>
+
+                    <div class="results-stats">
+                        <div class="stat-big">
+                            <div class="stat-big-value" id="scorePercentage">0%</div>
+                            <div class="stat-big-label">Score</div>
+                        </div>
+                        <div class="stat-big">
+                            <div class="stat-big-value" id="correctAnswers">0/10</div>
+                            <div class="stat-big-label">Correct</div>
+                        </div>
+                        <div class="stat-big">
+                            <div class="stat-big-value" id="timeTaken">0:00</div>
+                            <div class="stat-big-label">Time</div>
+                        </div>
+                    </div>
+
+                    <div class="results-breakdown" id="resultsBreakdown">
+                        <!-- Question breakdown will be loaded here -->
+                    </div>
+
+                    <div class="results-actions">
+                        <a href="/dashboard.html" class="btn btn-secondary">← Back to Dashboard</a>
+                        <button class="btn btn-primary" id="retakeQuizBtn">Retake Quiz 🔄</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/js/quiz.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+/* Subject Page Styles */
+
+.subject-header {
+    padding-top: 90px;
+    padding-bottom: var(--spacing-xl);
+    background: linear-gradient(135deg,
+            rgba(16, 185, 129, 0.1),
+            rgba(16, 185, 129, 0.05));
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.chemistry-header {
+    background: linear-gradient(135deg,
+            rgba(139, 92, 246, 0.1),
+            rgba(139, 92, 246, 0.05));
+}
+
+.physics-header {
+    background: linear-gradient(135deg,
+            rgba(59, 130, 246, 0.1),
+            rgba(59, 130, 246, 0.05));
+}
+
+.subject-hero {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.subject-icon-large {
+    font-size: 6rem;
+}
+
+.subject-info {
+    flex: 1;
+}
+
+.subject-title {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.subject-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subject-description {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+}
+
+.subject-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+}
+
+.subject-stats-bar .stat-item {
+    text-align: center;
+    padding: var(--spacing-sm);
+}
+
+.subject-stats-bar .stat-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.subject-stats-bar .stat-value {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-biology-start);
+}
+
+.chemistry-header .stat-value {
+    color: var(--color-chemistry-start);
+}
+
+.physics-header .stat-value {
+    color: var(--color-physics-start);
+}
+
+/* Main Content */
+.subject-main {
+    padding: var(--spacing-xl) 0;
+    min-height: 60vh;
+}
+
+.subject-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+/* Units Section */
+.units-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.unit-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.unit-card:hover {
+    box-shadow: var(--shadow-xl);
+}
+
+.unit-header {
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg,
+            rgba(16, 185, 129, 0.1),
+            rgba(16, 185, 129, 0.05));
+    border-bottom: 1px solid var(--glass-border);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chemistry-header .unit-header {
+    background: linear-gradient(135deg,
+            rgba(139, 92, 246, 0.1),
+            rgba(139, 92, 246, 0.05));
+}
+
+.physics-header .unit-header {
+    background: linear-gradient(135deg,
+            rgba(59, 130, 246, 0.1),
+            rgba(59, 130, 246, 0.05));
+}
+
+.unit-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.unit-progress {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+}
+
+.unit-toggle {
+    font-size: 1.5rem;
+    transition: transform var(--transition-base);
+}
+
+.unit-card.expanded .unit-toggle {
+    transform: rotate(180deg);
+}
+
+.unit-topics {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-slow);
+}
+
+.unit-card.expanded .unit-topics {
+    max-height: 2000px;
+}
+
+.topics-list {
+    padding: var(--spacing-md);
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.topic-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.topic-item:hover {
+    background: var(--color-bg-tertiary);
+    transform: translateX(5px);
+}
+
+.topic-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--color-biology-start);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.chemistry-header .topic-checkbox {
+    border-color: var(--color-chemistry-start);
+}
+
+.physics-header .topic-checkbox {
+    border-color: var(--color-physics-start);
+}
+
+.topic-item.completed .topic-checkbox {
+    background: var(--color-biology-start);
+    color: white;
+}
+
+.chemistry-header .topic-item.completed .topic-checkbox {
+    background: var(--color-chemistry-start);
+}
+
+.physics-header .topic-item.completed .topic-checkbox {
+    background: var(--color-physics-start);
+}
+
+.topic-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.topic-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.topic-action-btn {
+    padding: 0.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--color-text-primary);
+}
+
+.topic-action-btn:hover {
+    background: var(--color-bg-tertiary);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subject-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subject-title {
+        font-size: 2.5rem;
+    }
+
+    .subject-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .subject-actions {
+        flex-direction: column;
+    }
+
+    .subject-actions .btn {
+        width: 100%;
+    }
+
+    .topic-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .subject-icon-large {
+        font-size: 4rem;
+    }
+
+    .subject-title {
+        font-size: 2rem;
+    }
+
+    .subject-stats-bar {
+        grid-template-columns: 1fr;
+    }
+}

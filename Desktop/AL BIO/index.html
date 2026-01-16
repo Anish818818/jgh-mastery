@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/L Bio Learning Platform - උසස් පෙළ ජීව විද්‍යා ඉගෙනුම් වේදිකාව</title>
+  <meta name="description" content="Complete A/L Biology stream learning platform for Sri Lankan students">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/home.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="/" class="navbar-logo">
+        <span>🎓</span>
+        <span>A/L Bio Platform</span>
+      </a>
+      
+      <button class="navbar-toggle" id="navToggle">
+        ☰
+      </button>
+      
+      <ul class="navbar-menu" id="navMenu">
+        <li><a href="/" class="navbar-link active">Home</a></li>
+        <li><a href="/dashboard.html" class="navbar-link">Dashboard</a></li>
+        <li><a href="/biology.html" class="navbar-link">Biology</a></li>
+        <li><a href="/chemistry.html" class="navbar-link">Chemistry</a></li>
+        <li><a href="/physics.html" class="navbar-link">Physics</a></li>
+        <li><a href="/profile.html" class="navbar-link">Profile</a></li>
+        <li><button class="btn btn-sm btn-primary" id="themeToggle">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title fade-in">
+          ශ්‍රී ලංකා උසස් පෙළ<br>
+          <span class="gradient-text">Biology Stream</span><br>
+          ඉගෙනුම් වේදිකාව
+        </h1>
+        <p class="hero-subtitle fade-in">
+          Biology, Chemistry, Physics විෂයයන් සඳහා සම්පූර්ණ syllabus coverage,<br>
+          interactive quizzes, progress tracking සහ gamification සමඟ
+        </p>
+        <div class="hero-buttons fade-in">
+          <a href="/dashboard.html" class="btn btn-lg btn-primary">
+            Start Learning 🚀
+          </a>
+          <a href="#features" class="btn btn-lg btn-secondary">
+            Explore Features
+          </a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Subjects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" id="topicCount">50+</div>
+            <div class="stat-label">Topics</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Quizzes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Practice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects Section -->
+  <section class="section subjects-section" id="subjects">
+    <div class="container">
+      <h2 class="section-title text-center">විෂයයන්</h2>
+      <p class="section-subtitle text-center">
+        සම්පූර්ණ syllabus coverage සමඟ සියලු විෂයයන්
+      </p>
+      
+      <div class="grid grid-3 mt-lg">
+        <div class="card subject-card biology">
+          <div class="subject-icon">🧬</div>
+          <h3 class="card-title">Biology</h3>
+          <p class="card-subtitle">ජීව විද්‍යාව</p>
+          <p class="mt-sm">
+            Cell biology, genetics, ecology, evolution සහ තවත් බොහෝ topics
+          </p>
+          <div class="progress-container mt-md">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+          <div class="card-footer">
+            <span class="badge badge-success">7 Units</span>
+            <a href="/biology.html" class="btn btn-sm btn-primary">Start →</a>
+          </div>
+        </div>
+
+        <div class="card subject-card chemistry">
+          <div class="subject-icon">⚗️</div>
+          <h3 class="card-title">Chemistry</h3>
+          <p class="card-subtitle">රසායන විද්‍යාව</p>
+          <p class="mt-sm">
+            Organic, inorganic, physical chemistry සහ chemical bonding
+          </p>
+          <div class="progress-container mt-md">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+          <div class="card-footer">
+            <span class="badge badge-warning">6 Units</span>
+            <a href="/chemistry.html" class="btn btn-sm btn-primary">Start →</a>
+          </div>
+        </div>
+
+        <div class="card subject-card physics">
+          <div class="subject-icon">⚛️</div>
+          <h3 class="card-title">Physics</h3>
+          <p class="card-subtitle">භෞතික විද්‍යාව</p>
+          <p class="mt-sm">
+            Mechanics, electricity, waves, modern physics සහ තවත්
+          </p>
+          <div class="progress-container mt-md">
+            <div class="progress-bar" style="width: 0%"></div>
+          </div>
+          <div class="card-footer">
+            <span class="badge badge-primary">5 Units</span>
+            <a href="/physics.html" class="btn btn-sm btn-primary">Start →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <h2 class="section-title text-center">විශේෂාංග</h2>
+      <p class="section-subtitle text-center">
+        ඔබේ ඉගෙනීම වැඩිදියුණු කිරීම සඳහා powerful tools
+      </p>
+      
+      <div class="grid grid-4 mt-lg">
+        <div class="feature-card card">
+          <div class="feature-icon">📝</div>
+          <h4>Interactive Quizzes</h4>
+          <p>MCQ, true/false සහ වෙනත් question types සමඟ ඔබේ දැනුම test කරන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">📊</div>
+          <h4>Progress Tracking</h4>
+          <p>ඔබේ performance, strengths සහ weaknesses විස්තරාත්මකව බලන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">🎯</div>
+          <h4>Study Planner</h4>
+          <p>Goals set කරන්න, tasks schedule කරන්න සහ organized වෙන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">⏱️</div>
+          <h4>Pomodoro Timer</h4>
+          <p>Focused study sessions සඳහා timer එකක් සමඟ productivity වැඩි කරන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">🎴</div>
+          <h4>Flashcards</h4>
+          <p>Important concepts memorize කිරීම සඳහා flashcards භාවිතා කරන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">🏆</div>
+          <h4>Gamification</h4>
+          <p>Points, badges, levels සහ achievements earn කරන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">📈</div>
+          <h4>Analytics</h4>
+          <p>Detailed charts සහ graphs සමඟ ඔබේ progress visualize කරන්න</p>
+        </div>
+
+        <div class="feature-card card">
+          <div class="feature-icon">🌙</div>
+          <h4>Dark Mode</h4>
+          <p>Eye-friendly dark theme එකක් සමඟ රාත්‍රියේ study කරන්න</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-card card text-center">
+        <h2>ඔබේ A/L journey අද පටන් ගන්න!</h2>
+        <p class="mt-sm mb-lg">
+          සම්පූර්ණ syllabus coverage, interactive learning tools සහ progress tracking සමඟ<br>
+          ඔබේ A/L exam සඳහා හොඳින් සූදානම් වන්න
+        </p>
+        <a href="/dashboard.html" class="btn btn-lg btn-primary">
+          Get Started Now 🚀
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>A/L Bio Platform</h4>
+          <p>ශ්‍රී ලංකා උසස් පෙළ Biology stream ශිෂ්‍යයන් සඳහා සම්පූර්ණ learning platform</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/biology.html">Biology</a></li>
+            <li><a href="/chemistry.html">Chemistry</a></li>
+            <li><a href="/physics.html">Physics</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="/quiz.html">Quizzes</a></li>
+            <li><a href="/flashcards.html">Flashcards</a></li>
+            <li><a href="/study-timer.html">Study Timer</a></li>
+            <li><a href="/planner.html">Planner</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="/profile.html">Profile</a></li>
+            <li><a href="/analytics.html">Analytics</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 A/L Bio Learning Platform. Made with ❤️ for Sri Lankan students.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
